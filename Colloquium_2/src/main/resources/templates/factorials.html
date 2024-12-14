@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Результат факториалов</title>
+    <style>
+        body {
+            background-color: #9e9b98; /* Цвет фона */
+            color: #333; /* Цвет текста */
+            display: flex; /* Используем Flexbox для центрирования */
+            justify-content: center; /* Центрируем по горизонтали */
+            align-items: center; /* Центрируем по вертикали */
+            flex-direction: column; /* Вертикальная ориентация */
+            height: 100vh; /* Высота на всю страницу */
+            margin: 0; /* Убираем отступы */
+            text-align: center; /* Центрируем текст внутри контейнера */
+        }
+        h1 {
+            color: #182120; /* Цвет заголовка */
+        }
+        .results {
+            color: #182120; /* Цвет текста для результатов */
+            font-size: 1.5rem;
+            font-weight: bolder;
+            margin: 10px 0; /* Отступы вокруг результатов */
+        }
+        a {
+            color: #182120; /* Цвет ссылки */
+            text-decoration: none; /* Убираем подчеркивание */
+        }
+        a:hover {
+            text-decoration: underline; /* Подчеркивание при наведении */
+        }
+    </style>
+</head>
+<body>
+<h1>Факториалы чисел от 0 до <strong>${n}</strong></h1>
+<div class="results">
+    <#list factorials as factorial>
+    ${factorial}<#if factorial_has_next>, </#if>
+</#list>
+</div>
+<a href="/">Назад к вводу</a>
+</body>
+</html>
